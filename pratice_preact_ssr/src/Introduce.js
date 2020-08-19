@@ -1,7 +1,13 @@
-import { h } from "preact";
+import { h, Component } from "preact";
 
-export const Introduce = ({ url }) => (
-    <div>
-      Introduce : {url}
-    </div>
-);
+class Introduce extends Component {
+  render () {
+    return (
+      <div>
+        Introduce : test
+      </div>
+    )
+  }
+}
+
+export default Introduce;
