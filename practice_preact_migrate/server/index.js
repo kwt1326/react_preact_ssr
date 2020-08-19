@@ -2,7 +2,6 @@ import express from 'express';
 
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
 import App from '../src/app';
 import wdm from './wdm'
 import RenderHtml from './renderHtml';
@@ -25,9 +24,7 @@ app.get('*', function (req, res, next) {
 
   ReactDOMServer.renderToNodeStream(
     <RenderHtml {...renderProps}>
-      <StaticRouter location={req.originalUrl} context={{}}>
-        <App data={preloadState} />
-      </StaticRouter>
+      <App data={preloadState} />
     </RenderHtml>
   ).pipe(res);
 });
