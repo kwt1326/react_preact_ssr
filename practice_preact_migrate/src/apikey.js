@@ -1,0 +1,1 @@
+export const movieKeyKor = 'efcd99fe482359bdc45b7ab68a176062';
